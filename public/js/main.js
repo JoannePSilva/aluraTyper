@@ -1,11 +1,13 @@
 
-tempoInicial = $("#tempo_digitacao").text()
-$(document).ready(function () {
+var campo = $(".campo-digitacao");
+var tempoInicial = $("#tempo_digitacao").text()
+$(function(){
     atualizaTamanhoFrase();
     inicializaContadores();
     inicializaCronometro();
-
-});
+    $("#botao-reiniciar").click(reiniciaJogo);
+    
+  });
 
 function atualizaTamanhoFrase() {
     var frase = $(".frase").text();
@@ -14,7 +16,7 @@ function atualizaTamanhoFrase() {
     tamanhoFrase.text(numPalavras);
 }
 
-var campo = $(".campo-digitacao");
+
 
 function inicializaContadores() {
     campo.on("input", function () {
@@ -44,11 +46,10 @@ function inicializaCronometro() {
 
 }
 function reiniciaJogo(){
-    $("#botao-reiniciar").click(function () {
-        campo.attr("disabled", false)
+        campo.attr("disabled", false);
         campo.val(" ");
         $("#contador-palavras").text("0")
         $("#contador-caracteres").text("0")
+        $("tempo-digitacao").text(tempoInicial);
     
-});
-}
+};
