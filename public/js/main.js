@@ -1,3 +1,4 @@
+
 tempoInicial = $("#tempo_digitacao").text()
 $(document).ready(function () {
 
