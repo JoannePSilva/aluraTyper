@@ -1,8 +1,11 @@
 
 tempoInicial = $("#tempo_digitacao").text()
 $(document).ready(function () {
+    atualizaTamanhoFrase();
+    inicializaContadores();
+    inicializaCronometro();
 
-})
+});
 
 function atualizaTamanhoFrase() {
     var frase = $(".frase").text();
@@ -40,10 +43,12 @@ function inicializaCronometro() {
     });
 
 }
-
-$("#botao-reiniciar").click(function () {
-    campo.attr("disabled", false)
-    campo.val(" ");
-    $("#contador-palavras").text("0")
-    $("#contador-caracteres").text("0")
+function reiniciaJogo(){
+    $("#botao-reiniciar").click(function () {
+        campo.attr("disabled", false)
+        campo.val(" ");
+        $("#contador-palavras").text("0")
+        $("#contador-caracteres").text("0")
+    
 });
+}
