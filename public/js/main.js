@@ -1,6 +1,6 @@
 
 var campo = $(".campo-digitacao");
-var tempoInicial = $("#tempo_digitacao").text()
+var tempoInicial = $("#tempo-digitacao").text()
 $(function(){
     atualizaTamanhoFrase();
     inicializaContadores();
@@ -22,9 +22,7 @@ function inicializaContadores() {
     campo.on("input", function () {
         var conteudo = campo.val();
         var qtdPalavras = conteudo.split(/\S+/).length - 1;
-        console.log(qtdPalavras);
         $("#contador-palavras").text(qtdPalavras);
-
         var qtdCaracteres = conteudo.length;
         $("#contador-caracteres").text(qtdCaracteres);
 
@@ -34,12 +32,15 @@ function inicializaContadores() {
 function inicializaCronometro() {
     var tempoRestante = $("#tempo-digitacao").text();
     campo.one("focus", function () {
+        $("#botao-reiniciar").attr("disabled",true);
         var cronometroID = setInterval(function () {
             tempoRestante--;
             $("#tempo-digitacao").text(tempoRestante);
             if (tempoRestante < 1) {
                 campo.attr("disabled", true);
                 clearInterval(cronometroID);
+                $("#botao-reiniciar").attr("disabled", false);
+                
             }
         }, 1000);
     });

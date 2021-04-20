@@ -1,0 +1,38 @@
+div{
+    background-image: url('');
+    
+}    
+
+h1{
+    color: blue;
+}
+
+h2{
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+h3{
+    font-size: 15px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.frase{
+    color: blue;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.campo-digitacao{
+    width: 40%;
+    height: 100px;
+    display: block;
+}
+
+.campo-desativado{
+    background-color: lightgray;
+}
