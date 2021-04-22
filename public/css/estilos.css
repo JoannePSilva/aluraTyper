@@ -1,3 +1,7 @@
+body {
+    overflow: scroll;
+}
+
 div{
     background-image: url('');
     
@@ -38,6 +42,10 @@ h3{
     background-color: lightgray;
 }
 
+.icones{
+    vertical-align: middle;
+}
+
 .borda-verde {
     border: 3px solid green;
 }
@@ -45,3 +53,8 @@ h3{
 .borda-vermelha {
     border: 3px solid red;
 } 
+
+.placar {
+    display: none;
+}
+
