@@ -76,8 +76,3 @@ function reiniciaJogo() {
     campo.removeClass("borda-vermelha");
     campo.removeClass("borda-verde");
 }
-$("#botao-placar").click(mostraPlacar);
-
-function mostraPlacar() {
-    $(".placar").slideToggle(600);
-}
