@@ -31,8 +31,17 @@ h3{
     width: 40%;
     height: 100px;
     display: block;
+    border: 2px solid;
 }
 
 .campo-desativado{
     background-color: lightgray;
 }
+
+.borda-verde {
+    border: 3px solid green;
+}
+
+.borda-vermelha {
+    border: 3px solid red;
+} 

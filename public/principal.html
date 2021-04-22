@@ -25,13 +25,37 @@
         </ul>
 
         <textarea class="campo-digitacao" rows="8" cols ="40"></textarea>
-        <button id="botao-reiniciar">Reiniciar jogo</button>
-
+        <a class="btn-floating btn-small waves-effect waves-light green">
+            <i class="material-icons">restore</i>
+        </a>
          <ul>
             <li><span id="contador-caracteres">0</span> caracteres</li>
             <li><span id="contador-palavras">0</span> palavras</li>
         </ul>
 
+        <section class="placar">
+            <h3 class="center">PLACAR</h3>
+        <table class="centered bordered">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th> Número de palavras</th>
+                    <th> Remover</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>fulano</td>
+                    <td>20</td>
+
+                    <td>
+                        <a href="#" class="botao-remover">
+                            <i class="small material-icons">clear</i>
+                        </a>      
+                </tr>
+            </tbody>
+        </table>
+    </section>
                 <script src="js/jquery.js"></script>
                 <script src="js/main.js"></script>
     
